@@ -5,6 +5,7 @@ from django.urls import path, include
 #     TokenRefreshView,
 #     TokenVerifyView,
 # )
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,4 +17,6 @@ urlpatterns = [
     # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
     # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-]
+] 
+
+urlpatterns += staticfiles_urlpatterns()
